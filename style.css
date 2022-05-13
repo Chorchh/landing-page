@@ -18,7 +18,7 @@
 
 body {
     font-family: "Chela One", sans-serif;
-    background: var(--jet);
+    background: var(--steel-teal);
 }
 
 .logo {
@@ -47,11 +47,11 @@ img:hover{
 }
 
 .nav-link {
-    color: var(--steel-teal);
+    color: var(--jet);
 }
 
 .nav-link:hover {
-    color: var(--independence)
+    color: var(--steel-teal);
 }
 
 .nav-link:visited {
