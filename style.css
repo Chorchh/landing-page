@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,900&display=swap');
+
+/* Paleta de Colores elegida */
+:root {
+--cadmium-orange: #f28f3bff;
+--steel-teal: #588b8bff;
+--white: #ffffffff;
+--independence: #3d405bff;
+--jet: #2d2d2aff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Chela One", sans-serif;
+    background: var(--jet);
+}
+
+.logo {
+    height: 80%;
+    border-radius: 10px;
+}
+
+img:hover{ 
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+.header {
+    background: var(--white);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--steel-teal);
+}
+
+.nav-link:hover {
+    color: var(--independence)
+}
+
+.nav-link:visited {
+    background-color: var(--jet);
+}
