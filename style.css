@@ -81,6 +81,7 @@ a {
 .hero-text h1 {
     font-weight: 900;
     font-size: 3.2rem;
+    max-width: 550px;
 }
 
 .hero-text p {
