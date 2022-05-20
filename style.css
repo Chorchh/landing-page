@@ -80,7 +80,7 @@ a {
 
 .hero-text h1 {
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
 .hero-text p {
@@ -107,4 +107,17 @@ a {
 
 .btn-otro {
     color: var(--independence);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.info-text {
+    font-size: 1.6rem;
+    padding: 0 400px;
+    margin-top: 50px ;
 }
