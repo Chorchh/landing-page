@@ -279,6 +279,26 @@ a {
     font-weight: 100;
 }
 
+footer {
+    background: var(--steel-teal);
+}
+
+.contacto-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 4rem 2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.copy {
+    text-align: center;
+}
+
 /* *MEDIA QUERIES CELULAR* */
 @media screen and (max-width: 480px) {
     .container-btn {
@@ -341,6 +361,13 @@ a {
 
     .productos {
         max-width: 480px;
+    }
+
+    .contacto-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
@@ -423,5 +450,13 @@ a {
 
     .productos {
         max-width: 480px;
+    }
+
+    .contacto-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
     }
 }
