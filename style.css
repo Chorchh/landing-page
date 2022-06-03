@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Paleta de Colores elegida */
+/* *PALETA DE COLORES* */
 :root {
 --cadmium-orange: #f28f3bff;
 --steel-teal: #588b8bff;
 --white: #ffffffff;
---independence: #3d405bff;
 --black: #000000;
 }
 
@@ -30,7 +29,8 @@ a {
     max-width: 100%;
 }
 
-/* *Navbar */
+
+/* *NAVBAR* */
 .logo {
     height: 80%;
     border-radius: 10px;
@@ -58,6 +58,8 @@ a {
 
 .nav-link {
     color: var(--black);
+    padding: 0.9rem;
+    font-weight: 700;
 }
 
 .nav-link:hover {
@@ -68,7 +70,8 @@ a {
     display: none;
 }
 
-/* *HERO SECTION */
+
+/* *HERO SECTION* */
 .hero {
     display: flex;
     justify-content: center;
@@ -81,6 +84,7 @@ a {
     width: 500px;
     height: auto;
     border-radius: 15px;
+    box-shadow: rgba(243, 143, 59, 0.4) 5px 5px, rgba(243, 143, 59, 0.3) 10px 10px, rgba(243, 143, 59, 0.2) 15px 15px, rgba(243, 143, 59, 0.1) 20px 20px, rgba(243, 143, 59, 0.05) 25px 25px;
 }
 
 .hero-text {
@@ -91,12 +95,13 @@ a {
 
 .hero-text h1 {
     font-weight: 900;
-    font-size: 3.2rem;
+    font-size: 3rem;
     max-width: 550px;
 }
 
 .hero-text p {
     max-width: 400px;
+    font-size: 1.2rem;
 }
 
 .text-btn {
@@ -106,21 +111,36 @@ a {
 }
 
 .btn {
-    border: 2px solid var(--independence);
+    border: 2px solid var(--steel-teal);
     padding: 1rem 1.3rem;
     border-radius: 5px;
     font-weight: 600;
 }
 
 .btn-cta {
-    background: var(--independence);
-    color: var(--white);
+    background: var(--steel-teal);
+    color: var(--black);
+    font-weight: 200;
+}
+
+.btn-cta:hover {
+    background: var(--cadmium-orange);
+    color: var(--steel-teal);
+    font-weight: 200;
 }
 
 .btn-otro {
-    color: var(--independence);
+    color: var(--steel-teal);
+    font-weight: 200;
 }
 
+.btn-otro:hover {
+    color: var(--cadmium-orange);
+    border: 2px solid var(--cadmium-orange);
+}
+
+
+/* *INFO SECTION* */
 .info {
     display: flex;
     justify-content: center;
@@ -129,10 +149,70 @@ a {
 
 .info-text {
     font-size: 1.6rem;
-    padding: 0 400px;
+    padding: 3rem 25rem;
     margin-top: 50px ;
 }
 
+
+/* *DESCRIPTION SECTION* */
+.encuesta {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.encuesta h2 {
+    font-weight: 900;
+    font-size: 3rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--black);
+    border-top: 3px solid var(--cadmium-orange);
+}
+
+.encuesta-p {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 3rem 0;
+    font-weight: 100;
+
+}
+
+.encuesta-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+
+.encuesta-item {
+    height: 350px;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(243, 143, 59, 0.4) 5px 5px, rgba(243, 143, 59, 0.3) 10px 10px, rgba(243, 143, 59, 0.2) 15px 15px, rgba(243, 143, 59, 0.1) 20px 20px, rgba(243, 143, 59, 0.05) 25px 25px;
+}
+.encuesta-item span {
+    margin: 0 5rem;
+}
+
+.encuesta-item h3 {
+    color: var(--steel-teal);
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.encuesta-item p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    font-weight: 100;
+}
+
+
+/* *MEDIA QUERIES CELULAR* */
 @media screen and (max-width: 480px) {
     .container-btn {
         font-size: 2rem;
@@ -160,8 +240,33 @@ a {
     .hero-img {
         max-width: 80%;
     }
+
+    h1 {
+        line-height: 1.2;
+    }
+
+    .encuesta-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .encuesta {
+        max-width: 480px;
+    }
+
+    .container-item {
+        max-width: 200px;
+        gap: 3rem;
+    }
+    
+    .encuesta-item span {
+        margin: 0 10rem;
+    }
 }
 
+/* *MEDIA QUERIES TABLET* */
 @media screen and (max-width: 768px) {
     .container-btn {
         font-size: 2rem;
@@ -205,5 +310,29 @@ a {
         font-size: 1.3rem;
         width: 70%;
         padding: 1rem;
+    }
+    
+    h1 {
+        line-height: 1.2;
+    }
+
+    .encuesta-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .encuesta {
+        max-width: 480px;
+    }
+
+    .container-item {
+        max-width: 200px;
+        gap: 3rem;
+    }
+    
+    .encuesta-item span {
+        margin: 0 10rem;
     }
 }
