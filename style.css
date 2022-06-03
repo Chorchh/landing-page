@@ -66,9 +66,16 @@ a {
 }
 
 .container-btn {
+    /* display: none; */
+}
+
+.burga {
     display: none;
 }
 
+.menu-toggle {
+    display: none;
+}
 
 /* *HERO SECTION* */
 .hero {
@@ -310,6 +317,10 @@ h4 {
         color: var(--cadmium-orange);
     }
 
+    .burga {
+        display: flex;
+    }
+
     .nav-list {
         display: none;
     }
@@ -380,6 +391,22 @@ h4 {
     
     .hamburguesa {
         color: var(--cadmium-orange);
+    }
+
+    .burga {
+        display: block;
+        font-size: 3rem;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .menu-toggle:checked + .nav-list {
+        display: block;
+        position: absolute;
+        right: 0.5px;
+        font-size: 1.4rem;
+        background: var(--steel-teal);
+        border-radius: 10px;
     }
 
     .nav-list {
