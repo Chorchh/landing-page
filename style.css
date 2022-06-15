@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* *PALETA DE COLORES* */
 :root {
@@ -13,10 +13,11 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
 body {
-    font-family: "Chela One", sans-serif;
+    font-family: "Kanit", sans-serif;
     background: var(--white);
 }
 
@@ -263,7 +264,7 @@ a {
 }
 
 .product-item {
-    height: 500px;
+    height: 550px;
     width: 300px;
     padding: 2rem;
     justify-content: center;
@@ -299,7 +300,7 @@ a {
     margin-top: 2rem;
     text-align: center;
     color: var(--black);
-    border-top: 3px solid var(--cadmium-orange);    
+    border-top: 3px solid var(--cadmium-orange); 
 }
 
 .clients p {
@@ -307,6 +308,65 @@ a {
     font-size: 1.6rem;
     padding: 3rem 0;
     font-weight: 100;
+}
+
+ul.slider {
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+
+ul.slider li {
+    position: absolute;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+.container-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-clientes {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+}
+
+ul.slider li:target {
+    opacity: 1;
+}
+
+.menu-slider {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.menu-slider li {
+    flex-direction: row;
+    text-align: center;
+}
+
+.menu-slider li a {
+    color: var(--steel-teal);
+    background-color: var(--cadmium-orange);
+    padding: 15px;
+    width: 10px;
+    height: 10px;
+    font-size: 1rem;
+    border-radius: 100%;
+    font-weight: 700;
 }
 
 /* *FOOTER* */
@@ -324,6 +384,20 @@ footer {
 h4 {
     font-size: 1.2rem;
     font-weight: 700;
+    margin: 1rem 0;
+}
+
+.contacto-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container-redes {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .copy {
@@ -332,94 +406,26 @@ h4 {
 
 /* *MEDIA QUERIES CELULAR* */
 @media screen and (max-width: 480px) {
+/* *NAVBAR* */
+    body {
+        z-index: 1;
+    }
+
     .container-btn {
         font-size: 2rem;
         color: var(--cadmium-orange);
     }
-
-    .hamburguesa {
-        color: var(--cadmium-orange);
-    }
-
-    .burga {
-        display: flex;
-    }
-
+    
     .nav-list {
         display: none;
     }
 
-    .hero {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-text {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-img {
-        max-width: 80%;
-    }
-
-    h1 {
-        line-height: 1.2;
-    }
-
-    .encuesta-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .encuesta {
-        max-width: 480px;
-    }
-
-    .container-item {
-        max-width: 200px;
-        gap: 3rem;
-    }
-    
-    .encuesta-item span {
-        margin: 0 10rem;
-    }
-
-    .product-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .productos {
-        max-width: 480px;
-    }
-
-    .contacto-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-
-/* *MEDIA QUERIES TABLET* */
-@media screen and (max-width: 768px) {
-    .container-btn {
-        font-size: 2rem;
-        display: block;
-    }
-    
     .hamburguesa {
         color: var(--cadmium-orange);
     }
 
     .burga {
-        display: block;
+        display: flex;
         font-size: 3rem;
         cursor: pointer;
         position: relative;
@@ -432,16 +438,14 @@ h4 {
         font-size: 1.4rem;
         background: var(--steel-teal);
         border-radius: 10px;
+        z-index: 4;
     }
 
-    .nav-list {
-        display: none;
-    }
-
+    /* *HERO SECTION */
     .hero {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
     }
 
     .hero-text {
@@ -464,33 +468,28 @@ h4 {
     .info-text {
         display: flex;
         flex-direction: column;
-        font-size: 1.3rem;
         width: 70%;
         padding: 1rem;
+        font-size: 1.3rem;
     }
     
-    h1 {
-        line-height: 1.2;
+    /* *DESCRIPTION SECTION* */
+    .encuesta {
+        max-width: 400px;
     }
 
     .encuesta-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
-    .encuesta {
-        max-width: 480px;
+    .encuesta-item {
+        text-align: center;
     }
 
-    .container-item {
-        max-width: 200px;
-        gap: 3rem;
-    }
-    
-    .encuesta-item span {
-        margin: 0 10rem;
+    /* *PRODUCTS SECTION* */
+    .productos {
+        max-width: 400px;
     }
 
     .product-container {
@@ -500,8 +499,13 @@ h4 {
         align-items: center;
     }
 
-    .productos {
-        max-width: 480px;
+    /* *SECTION CLIENTES* */
+    .clients {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .contacto-container {
@@ -511,4 +515,133 @@ h4 {
         gap: 50px;
         text-align: center;
     }
+
+    .container-redes {
+        margin: 1rem auto;
+    }
 }
+
+/* *MEDIA QUERIES CELULAR* */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* *NAVBAR* */
+        body {
+            z-index: 1;
+        }
+    
+        .container-btn {
+            font-size: 2rem;
+            color: var(--cadmium-orange);
+        }
+        
+        .nav-list {
+            display: none;
+        }
+    
+        .hamburguesa {
+            color: var(--cadmium-orange);
+        }
+    
+        .burga {
+            display: flex;
+            font-size: 3rem;
+            cursor: pointer;
+            position: relative;
+        }
+    
+        .menu-toggle:checked + .nav-list {
+            display: block;
+            position: absolute;
+            right: 0.5px;
+            font-size: 1.4rem;
+            background: var(--steel-teal);
+            border-radius: 10px;
+            z-index: 4;
+        }
+    
+        /* *HERO SECTION */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    
+        .hero-text {
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .hero-text h1 {
+            padding: 0 3rem;
+            font-size: 3rem;
+        }
+    
+        .hero-text p {
+            padding: 0 1.5rem;
+            font-size: 1.5rem;
+        }
+    
+        .hero-img {
+            max-width: 80%;
+        }
+    
+        .info-text {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            padding: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* *DESCRIPTION SECTION* */
+        .encuesta {
+            max-width: 690px;
+        }
+    
+        .encuesta-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 400px;
+        }
+    
+        .encuesta-item {
+            text-align: center;
+        }
+    
+        /* *PRODUCTS SECTION* */
+        .productos {
+            max-width: 690px;
+        }
+    
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+    
+        /* *SECTION CLIENTES* */
+        .clients {
+            max-width: 690px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* *FOOTER* */
+        .contacto-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            text-align: center;
+        }
+    
+        .container-redes {
+            margin: 1rem auto;
+        }
+    }

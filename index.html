@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -39,7 +43,9 @@
       <!-- *HERO SECTION* -->
       <section class="hero" id="nosotros">
         <div class="hero-text">
-          <h1>Recomendar juegos es nuestra pasión</h1>
+          <h1 class="animate__animated animate__bounceInLeft">
+            Recomendar juegos es nuestra pasión
+          </h1>
           <p>
             Te ayudamos a encontrar tu siguiente boardgame. A través de una
             breve encuesta, decidiremos cuál será el próximo boardgame en tu
@@ -116,7 +122,7 @@
             >
               <i class="fa-solid fa-2 fa-bounce"></i>
             </span>
-            <h3>Tus preferencias</h3>
+            <h3>Tus gustos</h3>
             <p>
               En esta parte nos vas a explicar cuales son los tipos o mecánicas
               de juegos que más te gustan
@@ -138,7 +144,7 @@
             >
               <i class="fa-solid fa-3 fa-bounce"></i>
             </span>
-            <h3>Cuánto querés gastar</h3>
+            <h3>Tu presupuesto</h3>
             <p>
               Nos decís con qué presupuesto contás para la compra o regalo que
               querés realizar
@@ -206,6 +212,52 @@
       <section class="clients">
         <h2>Clientes felices</h2>
         <p>Nuestros clientes jugando, que estás esperando!?</p>
+        <div class="container-slider">
+          <ul class="slider">
+            <li id="slider1">
+              <img
+                src="./img/descarga.jpg"
+                alt="clientes1"
+                class="img-clientes"
+              />
+            </li>
+            <li id="slider2">
+              <img
+                src="./img/istockphoto-1227346902-612x612.jpg"
+                alt="clientes2"
+                class="img-clientes"
+              />
+            </li>
+            <li id="slider3">
+              <img
+                src="./img/istockphoto-1286003631-612x612.jpg"
+                alt="clientes3"
+                class="img-clientes"
+              />
+            </li>
+            <li id="slider4">
+              <img
+                src="./img/istockphoto-653362042-612x612.jpg"
+                alt="clientes4"
+                class="img-clientes"
+              />
+            </li>
+            <li id="slider5">
+              <img
+                src="./img/Judi-Slot-Online.jpeg"
+                alt="clientes4"
+                class="img-clientes"
+              />
+            </li>
+          </ul>
+          <ul class="menu-slider">
+            <li class="btn-slider"><a href="#slider1">1</a></li>
+            <li class="btn-slider"><a href="#slider2">2</a></li>
+            <li class="btn-slider"><a href="#slider3">3</a></li>
+            <li class="btn-slider"><a href="#slider4">4</a></li>
+            <li class="btn-slider"><a href="#slider5">5</a></li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer>
@@ -214,8 +266,11 @@
           <h4>Contacto</h4>
           <p>Dirección: calle falsa 1325</p>
           <p>Teléfono: (11) 2504-1314</p>
-        </div>
-        <div class="legale-footer">
+          <div class="container-redes">
+            <i class="fa-brands fa-instagram redes"></i>
+            <i class="fa-brands fa-facebook redes"></i>
+            <i class="fa-brands fa-twitter redes"></i>
+          </div>
           <h4>Legales</h4>
           <p>Las fotos son a modo ilustrativo</p>
           <p>
